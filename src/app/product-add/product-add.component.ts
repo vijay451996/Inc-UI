@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ProductsService } from '../products.service';
 
@@ -7,7 +7,7 @@ import { ProductsService } from '../products.service';
   templateUrl: './product-add.component.html',
   styleUrls: ['./product-add.component.css']
 })
-export class ProductAddComponent implements OnInit {
+export class ProductAddComponent {
 
   angForm: FormGroup;
   constructor(private fb: FormBuilder, private ps: ProductsService) {
@@ -24,9 +24,6 @@ export class ProductAddComponent implements OnInit {
 
   addProduct(ProductName, ProductDescription, ProductPrice) {
     this.ps.addProduct(ProductName, ProductDescription, ProductPrice);
-  }
-
-  ngOnInit() {
   }
 
 }

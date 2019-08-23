@@ -13,7 +13,7 @@ import { NavigationCancel,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular8tutorial';
+  title = 'angular8';
   constructor(private loadingBar: SlimLoadingBarService, private router: Router) {
     this.router.events.subscribe((event: Event) => {
       this.navigationInterceptor(event);
